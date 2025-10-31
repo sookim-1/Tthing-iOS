@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct TthingApp: App {
+    
+    @StateObject private var authViewModel = AuthViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            AuthView()
+            InitView()
+              .environmentObject(authViewModel)
         }
     }
 }

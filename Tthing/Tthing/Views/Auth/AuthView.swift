@@ -25,6 +25,8 @@ struct AuthView: View {
     
     @State private var showPass = false
     
+    @EnvironmentObject var authViewModel: AuthViewModel
+    @Environment(\.dismiss) var dismiss
     @State private var authType: AuthType = .login
      
     var body: some View {
@@ -121,7 +123,21 @@ struct AuthView: View {
             }
             
             Button {
+                if password != confirmPassword {
+                  return
+                }
                 
+                Task {
+                    if authType == .login {
+                        await authViewModel.login(email: email, password: password)
+                    } else {
+                        await authViewModel.register(email: email, password: password)
+                    }
+                    
+                    if authViewModel.isAuthenticated {
+                        dismiss()
+                    }
+                }
             } label: {
                 Text(authType == .login ? "Login" : "Register")
             }

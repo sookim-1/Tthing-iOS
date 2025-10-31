@@ -7,14 +7,22 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct InitView: View {
+    @EnvironmentObject var authViewModel: AuthViewModel
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+      Group {
+        if authViewModel.isAuthenticated {
+          HomeView()
+        } else {
+          AuthView()
         }
-        .padding()
+      }
+      .onAppear {
+        Task {
+          await authViewModel.checkAuthStatus()
+        }
+      }
     }
-}
+  }
+
