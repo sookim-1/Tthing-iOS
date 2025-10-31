@@ -41,6 +41,7 @@ struct AuthView: View {
                 .focused($isEmailFocused)
                 .textFieldStyle(AuthTextFieldStyle(isFocused: $isEmailFocused))
                 
+                
                 ZStack {
                     TextField(text: $password) {
                         Text("Password")
@@ -202,6 +203,7 @@ struct AuthTextFieldStyle: TextFieldStyle {
                 }
             )
             .animation(.easeInOut(duration: 0.2), value: isFocused.wrappedValue)
+            .textInputAutocapitalization(.never)
     }
     
 }

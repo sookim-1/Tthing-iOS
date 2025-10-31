@@ -30,22 +30,7 @@ enum AppConfiguration {
 }
 
 enum UIConstants {
-  // 간격
-  static let paddingSmall: CGFloat = 8
-  static let paddingMedium: CGFloat = 16
-  static let paddingLarge: CGFloat = 24
-
-  // 코너 반경
-  static let cornerRadiusSmall: CGFloat = 8
   static let cornerRadiusMedium: CGFloat = 12
-  static let cornerRadiusLarge: CGFloat = 16
-
-  // 이미지 크기
-  static let thumbnailSize: CGFloat = 200
-  static let cardImageSize: CGFloat = 120
-
-  // 애니메이션
-  static let animationDuration: Double = 0.3
 }
 
 enum ErrorMessages {

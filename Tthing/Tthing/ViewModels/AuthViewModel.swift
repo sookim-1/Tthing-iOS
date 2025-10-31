@@ -24,7 +24,6 @@ class AuthViewModel: ObservableObject {
       currentUser = User.from(appwriteUser: appwriteUser)
       isAuthenticated = true
 
-      // 푸시 알림 설정
       await setupPushNotifications()
     } catch {
       print("Not authenticated: \(error)")

@@ -158,6 +158,17 @@ class AppWriteService {
     )
     return Data(buffer: byteBuffer)
   }
+    
+    func getPreviewFileData(fileId: String) async throws -> Data {
+        let byteBuffer = try await storage.getFilePreview(
+        bucketId: AppConfiguration.storageID,
+        fileId: fileId,
+        width: 200,
+        height: 150
+      )
+      return Data(buffer: byteBuffer)
+    }
+
 
   func deleteFile(fileId: String) async throws {
     try await storage.deleteFile(
