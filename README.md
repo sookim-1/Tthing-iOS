@@ -13,9 +13,21 @@
 
 ## Overview
 
+<img src="appIcon.png" alt="logo" width="80" height="80">
+
 Many everyday items like toothbrushes, towels, and razor blades have recommended replacement periods for hygiene and health reasons, but they're easy to forget. **Tthing** solves this problem by helping you track these consumables and notifying you when it's time to replace them.
 
 Simply register a product by selecting its category, and the app automatically suggests appropriate replacement intervals. You'll receive timely push notifications so you never miss a replacement date.
+
+## Preview
+
+> Auth
+
+![login](./github_reference/v1.0.0/login.gif)
+
+> Home
+
+![Home](./github_reference/v1.0.0/home.gif)
 
 ## Requirements
 
