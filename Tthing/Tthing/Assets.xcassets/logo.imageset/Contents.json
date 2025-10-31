@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "TthingLogo.png",
+      "filename" : "Tthing.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "TthingLogo 1.png",
+      "filename" : "Tthing 1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "TthingLogo 2.png",
+      "filename" : "Tthing 2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

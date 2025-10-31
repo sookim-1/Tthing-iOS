@@ -193,7 +193,7 @@ struct AuthTextFieldStyle: TextFieldStyle {
 struct TopView: View {
     var body: some View {
         VStack(alignment: .center) {
-            Image(.tthing)
+            Image(.logo)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 150)
