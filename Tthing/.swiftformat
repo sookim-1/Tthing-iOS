@@ -1,0 +1,145 @@
+# SwiftFormat Configuration
+# Swift 코드 자동 포맷팅 설정
+# 참고: Airbnb, Google, StyleShare Swift Style Guides
+
+# 제외할 디렉토리
+--exclude Carthage,Pods,.build,DerivedData,vendor
+
+# Swift 버전
+--swiftversion 5.9
+
+# 기본 옵션
+--indent 2                          # 2칸 들여쓰기 (spaces)
+--ifdef no-indent                   # #if 문 들여쓰기 하지 않음
+--indentstrings true                # 문자열 내 들여쓰기 적용
+
+# Import 정렬
+--importgrouping testable-bottom    # @testable import를 맨 아래로
+
+# 후행 쉼표
+--commas always                     # 여러 줄일 때 후행 쉼표 항상 추가
+
+# 공백 처리
+--trimwhitespace always             # 후행 공백 항상 제거
+
+# 줄바꿈 (wrapping)
+--maxwidth 100                      # 최대 줄 길이 100자
+--wraparguments before-first        # 인자가 길 때 첫 인자 전에 줄바꿈
+--wrapparameters before-first       # 파라미터가 길 때 첫 파라미터 전에 줄바꿈
+--wrapcollections before-first      # 컬렉션이 길 때 첫 요소 전에 줄바꿈
+--wrapconditions before-first       # 조건문이 길 때 첫 조건 전에 줄바꿈
+--wrapreturntype preserve           # 반환 타입 줄바꿈 현재 상태 유지
+--wrapeffects preserve              # async/throws 줄바꿈 현재 상태 유지
+--closingparen balanced             # 닫는 괄호 위치 균형있게
+--callsiteparen balanced            # 함수 호출 시 괄호 위치 균형있게
+--wraptypealiases before-first      # typealias가 길 때 첫 요소 전에 줄바꿈
+--wrapternary before-operators      # 삼항 연산자 줄바꿈 시 연산자 앞에서
+
+# 속성 (Attributes) 위치
+--funcattributes prev-line          # 함수 속성은 이전 줄에
+--typeattributes prev-line          # 타입 속성은 이전 줄에
+--varattributes preserve            # 변수 속성은 현재 상태 유지
+
+# self 키워드
+--self remove                       # 불필요한 self 제거 (필요한 경우만 유지)
+--selfrequired                      # @escaping 클로저 등 self가 필요한 곳만 유지
+
+# 빈 괄호/중괄호
+--emptybraces spaced                # 빈 중괄호 사이 공백: { }
+
+# 범위 연산자
+--ranges preserve                   # 범위 연산자 공백 현재 상태 유지
+
+# 연산자 함수
+--operatorfunc no-space             # 연산자 함수 정의 시 공백 없음: func ==
+
+# Opaque generic parameters
+--someany disabled                  # some/any 자동 변환 비활성화
+
+# else 위치
+--elseposition same-line            # else를 같은 줄에: } else {
+--guardelse next-line               # guard의 else는 다음 줄에
+
+# 세미콜론
+--semicolons never                  # 세미콜론 사용 안 함
+
+# 문서 주석
+--doccomments preserve              # 문서 주석 형식 보존
+
+# 옵셔널 타입 표기
+--shortoptionals always             # Int? 형식 사용 (Optional<Int> 대신)
+
+# 수정자(modifier) 순서
+--modifierorder private,fileprivate,internal,package,public,open,private(set),fileprivate(set),internal(set),package(set),public(set),open(set),override,final,dynamic,optional,required,convenience,indirect,isolated,nonisolated,nonisolated(unsafe),lazy,weak,unowned,unowned(safe),unowned(unsafe),static,class,borrowing,consuming,mutating,nonmutating,prefix,infix,postfix,async
+
+# 활성화할 규칙
+--rules                            \
+  andOperator,                     \
+  anyObjectProtocol,               \
+  blankLineAfterSwitchCase,        \
+  blankLinesBetweenScopes,         \
+  blankLinesAtStartOfScope,        \
+  blankLinesAtEndOfScope,          \
+  blankLinesAroundMark,            \
+  blockComments,                   \
+  braces,                          \
+  consecutiveBlankLines,           \
+  consecutiveSpaces,               \
+  docComments,                     \
+  duplicateImports,                \
+  elseOnSameLine,                  \
+  emptyBraces,                     \
+  enumNamespaces,                  \
+  extensionAccessControl,          \
+  hoistPatternLet,                 \
+  indent,                          \
+  initCoderUnavailable,            \
+  leadingDelimiters,               \
+  linebreakAtEndOfFile,            \
+  markTypes,                       \
+  modifierOrder,                   \
+  preferForLoop,                   \
+  preferKeyPath,                   \
+  redundantBackticks,              \
+  redundantBreak,                  \
+  redundantClosure,                \
+  redundantExtensionACL,           \
+  redundantFileprivate,            \
+  redundantGet,                    \
+  redundantInit,                   \
+  redundantLet,                    \
+  redundantLetError,               \
+  redundantObjc,                   \
+  redundantOptionalBinding,        \
+  redundantParens,                 \
+  redundantPattern,                \
+  redundantRawValues,              \
+  redundantReturn,                 \
+  redundantSelf,                   \
+  redundantType,                   \
+  redundantVoidReturnType,         \
+  semicolons,                      \
+  sortedImports,                   \
+  sortedSwitchCases,               \
+  spaceAroundBraces,               \
+  spaceAroundBrackets,             \
+  spaceAroundComments,             \
+  spaceAroundGenerics,             \
+  spaceAroundOperators,            \
+  spaceAroundParens,               \
+  spaceInsideBraces,               \
+  spaceInsideBrackets,             \
+  spaceInsideComments,             \
+  spaceInsideGenerics,             \
+  spaceInsideParens,               \
+  strongifiedSelf,                 \
+  trailingClosures,                \
+  trailingCommas,                  \
+  trailingSpace,                   \
+  typeSugar,                       \
+  void,                            \
+  wrap,                            \
+  wrapArguments,                   \
+  wrapAttributes,                  \
+  wrapMultilineStatementBraces,    \
+  yodaConditions
