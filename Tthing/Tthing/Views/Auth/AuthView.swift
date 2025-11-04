@@ -124,7 +124,7 @@ struct AuthView: View {
             }
             
             Button {
-                if password != confirmPassword {
+                if authType == .register && password != confirmPassword {
                   return
                 }
                 
